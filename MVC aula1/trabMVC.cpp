@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// Model (Representa os dados do Usuário)
+// Model 
 class User {
     private:
         string name;
@@ -17,8 +17,8 @@ class User {
         void setAge(int newAge) { age = newAge; }
 };
 
-    // View (Exibe informações do Usuário)
-    class UserView {
+// View 
+class UserView {
     public:
         void displayUser(string name, int age) {
             cout << "Usuário: " << name << ", Idade: " << age << endl;
@@ -40,23 +40,18 @@ class UserController {
 };
 
 int main() {
-    // Criando um usuário (Model)
+
     User user("Herich", 21);
 
-    // Criando a View
     UserView view;
 
-    // Criando o Controller
     UserController controller(&user, &view);
 
-    // Exibir usuário inicial
     controller.updateView();
 
-    // Modificar os dados do usuário
     controller.setUserName("Gabriel");
     controller.setUserAge(22);
 
-    // Atualizar a View
     controller.updateView();
 
     return 0;
