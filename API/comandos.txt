@@ -12,3 +12,10 @@ npm i cors
 npm i express-async-errors
 npm i -D @types/express
 npm i -D @types/cors
+
+npm i typeorm@0.2.45
+npm i reflect-metadata pg
+
+docker run --name postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+npm run typeorm migration:run
