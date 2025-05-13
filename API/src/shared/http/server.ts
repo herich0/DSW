@@ -14,13 +14,14 @@ app.use(routes);
 app.use(errors());
 
 app.use((error:Error, request:Request,response:Response, next:NextFunction) =>{
+    console.log(error);
     if (error instanceof AppError){
          return response.status(error.statusCode).json({
             status:'error',
             message:error.message
         });
     }
-    response.status(500).json({
+    return response.status(500).json({
         status:'error',
         message:'Internal Server Error'
     });
