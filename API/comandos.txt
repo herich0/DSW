@@ -33,3 +33,12 @@ npm i multer
 npm i -D @types/multer
 
 npm run typeorm migrations:create -- -n CreateUserTokens
+
+npm i date-fns
+
+npm i nodemailer
+npm i @types/nodemailer
+
+npm i handlebars
+
+npm run typeorm migration:create -- -n CreateProducts
