@@ -1,0 +1,15 @@
+npm i -g @angular/cli@15
+ng version
+ng new
+ns s ou ng serve
+ng generate component view/home
+ng generate component view/user-login
+ng generate class model/User --skip-tests
+ng generate class model/Product --skip-tests
+ng generate class model/Customer --skip-tests
+ng generate class model/Order --skip-tests
+ng generate service services/auth --skip-tests
+ng generate service services/user --skip-tests
+ng generate service services/product --skip-tests
+ng generate service services/customer --skip-tests
+ng generate service services/order --skip-tests
